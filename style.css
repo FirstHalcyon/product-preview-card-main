@@ -25,7 +25,7 @@
     font-family: 'Fraunces';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/fraunces-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('./assets/fonts/fraunces-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* CSS Modern Reset Start */
@@ -61,4 +61,135 @@
 }
 
 /* CSS Modern Reset End */
+body {
+    background-color: hsl(30, 38%, 92%);
+}
 
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+    object-fit: contain;
+}
+
+.main-img {
+    border-radius: 10px 10px 0 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem;
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding: 1.25rem;
+}
+
+.header {
+    font-family: Fraunces, serif;
+}
+
+h1 {
+    font-size: 1.875rem;
+    line-height: 1;
+}
+
+.content {
+    max-inline-size: 66ch;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.825rem;
+    line-height: 1.75;
+    color: hsl(228, 12%, 48%);
+}
+
+.first {
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    transform: scale(1,0.95);
+    font-size: 0.75rem;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price {
+    color: hsl(158, 36%, 37%);
+    font-size: 1.875rem;
+}
+
+.btn {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    gap: 1em;
+    border: 0;
+    background-color: hsl(158, 36%, 37%);
+    padding: 0.75em;
+    border-radius: 7px;
+}
+
+.btn:hover {
+    transition: background .05s ease-in;
+    background-color: hsl(139, 47%, 19%);
+    cursor: pointer;
+}
+
+@media (min-device-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+
+    .first {
+        font-size: 0.875rem;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+
+    .container {
+        flex-direction: row;
+        max-width: 40rem;
+    }
+
+    section {
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .main-img {
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+        min-width: 50%;
+        min-height: 100%;
+    }
+
+    section {
+        max-width: 50%;
+        justify-content: center;
+    }
+}
